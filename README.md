@@ -1,16 +1,23 @@
-# app_busca_cep_flutter
+# App Buscador de CEP
 
-A new Flutter project.
+![image](https://github.com/user-attachments/assets/062b23d0-a584-491a-9ccb-af6f34afb68a)
 
-## Getting Started
+O projeto foi desenvolvido para facilitar a busca por um CEP especifico possibilitando ao usuário o cadastro do mesmo. A persistência dos dados é através do banco de dados Back4App, na qual quando usuário realiza a busca do CEP, é realizada uma consulta na API viaCEP e se preferir, o usuário poderá cadastrar o CEP no banco de dados. Caso o CEP consultado na API não tenha sido cadastrado no DB, o cadastro é concluido e uma mensagem aparecerá indicando sucesso.
 
-This project is a starting point for a Flutter application.
+O usuário poderá acessar todos os ceps cadastrados em uma pagina , ter acesso a informações específicas do mesmo e excluir se desejar.
 
-A few resources to get you started if this is your first Flutter project:
+Tecnologias utilizadas: 
+-Dart 
+-Flutter 
+-VS Code 
+-Android Studio
+-API viaCep
+-Back4App
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Pacotes de destaque:
+-Google fonts - diversas fontes disponiveis; 
+-animated_text_kit - Para animação da splash screen ;
+-font_awesome_flutter - diversos icones disponiveis;
+-brasil_fields - para obter formatações de dados utilizados no Brasil;
+-dio - Biblioteca dio do HTTP para realizar consulta em API.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
