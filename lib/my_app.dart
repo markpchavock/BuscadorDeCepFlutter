@@ -1,6 +1,4 @@
-import 'package:app_busca_cep_flutter/pages/cep_busca_page.dart';
 import 'package:flutter/material.dart';
-import 'pages/cep_cadastrado_page.dart';
 import 'pages/cep_splash_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 

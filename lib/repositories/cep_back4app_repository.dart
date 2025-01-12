@@ -20,6 +20,7 @@ class CepBack4appRepository {
       var data = response.data["results"];
       return data.isNotEmpty;
     } catch (e) {
+      // ignore: avoid_print
       print("Erro ao verificar CEP : $e");
       return false;
     }
@@ -35,6 +36,7 @@ class CepBack4appRepository {
       var response = await _custonDio.dio.post(url, data: viaCep.toJson());
       return response.statusCode == 201;
     } catch (e) {
+      // ignore: avoid_print
       print("Erro ao cadastrar o CEP: $e");
       return false;
     }
@@ -46,6 +48,7 @@ class CepBack4appRepository {
       var response = await _custonDio.dio.delete(url);
       return response.statusCode == 200; // Sucesso
     } catch (e) {
+      // ignore: avoid_print
       print("Erro ao excluir CEP: $e");
       return false;
     }
@@ -57,6 +60,7 @@ class CepBack4appRepository {
       var response = await _custonDio.dio.put(url, data: dados);
       return response.statusCode == 200; // Sucesso
     } catch (e) {
+      // ignore: avoid_print
       print("Erro ao atualizar CEP: $e");
       return false;
     }

@@ -57,10 +57,12 @@ class _CepCadastradoPageState extends State<CepCadastradoPage> {
                       var excluir =
                           await cepBack4appRepository.excluirCep(cep.objectId!);
                       if (excluir) {
+                        // ignore: use_build_context_synchronously
                         ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(content: Text("CEP Excluido")));
                         carregarDados();
                       } else {
+                        // ignore: use_build_context_synchronously
                         ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(content: Text("Erro ao Excluir o CEP")));
                       }

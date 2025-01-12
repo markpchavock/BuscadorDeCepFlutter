@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 class CepDetailPage extends StatefulWidget {
   final CepResults cep;
 
-  CepDetailPage({required this.cep});
+   // ignore: prefer_const_constructors_in_immutables, use_key_in_widget_constructors
+   CepDetailPage({required this.cep});
 
   @override
   State<CepDetailPage> createState() => _CepDetailPageState();

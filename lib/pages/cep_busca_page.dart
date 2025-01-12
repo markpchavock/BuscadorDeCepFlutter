@@ -88,11 +88,11 @@ class _BuscaCepPageState extends State<BuscaCepPage> {
                     viaCepModel = await viaCepRepository.buscarCEP(cep);
                   }
 
-                  logradouroController.text = "${viaCepModel.logradouro ?? ""}";
-                  localidadeController.text = "${viaCepModel.localidade ?? ""}";
-                  bairroController.text = "${viaCepModel.bairro ?? ""}";
-                  estadoController.text = "${viaCepModel.estado ?? ""}";
-                  regiaoController.text = "${viaCepModel.regiao ?? ""}";
+                  logradouroController.text = viaCepModel.logradouro ?? "";
+                  localidadeController.text = viaCepModel.localidade ?? "";
+                  bairroController.text = viaCepModel.bairro ?? "";
+                  estadoController.text = viaCepModel.estado ?? "";
+                  regiaoController.text = viaCepModel.regiao ?? "";
 
                   setState(() {
                     loading = false;
@@ -128,11 +128,13 @@ class _BuscaCepPageState extends State<BuscaCepPage> {
                   var exists = await cepBack4appRepository
                       .verificarCep(cepController.text);
                   if (exists) {
+                    // ignore: use_build_context_synchronously
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         content: Text("CEP já cadastrado no sistema!")));
                   } else {
                     var register =
                         await cepBack4appRepository.cadastrarCep(viaCepModel);
+                    // ignore: use_build_context_synchronously
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         content: Text(register
                             ? "CEP Cadastrado"

@@ -10,15 +10,15 @@ class Back4AppCepModel {
 
           <CepResults>[];
       json['results'].forEach((v) {
-        results!.add(new CepResults.fromJson(v));
+        results!.add(CepResults.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.results != null) {
-      data['results'] = this.results!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (results != null) {
+      data['results'] = results!.map((v) => v.toJson()).toList();
     }
     return data;
   }
@@ -74,21 +74,21 @@ class CepResults {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['objectId'] = this.objectId;
-    data['cep'] = this.cep;
-    data['logradouro'] = this.logradouro;
-    data['complemento'] = this.complemento;
-    data['unidade'] = this.unidade;
-    data['bairro'] = this.bairro;
-    data['uf'] = this.uf;
-    data['localidade'] = this.localidade;
-    data['estado'] = this.estado;
-    data['regiao'] = this.regiao;
-    data['ibge'] = this.ibge;
-    data['ddd'] = this.ddd;
-    data['createdAt'] = this.createdAt;
-    data['updatedAt'] = this.updatedAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['objectId'] = objectId;
+    data['cep'] = cep;
+    data['logradouro'] = logradouro;
+    data['complemento'] = complemento;
+    data['unidade'] = unidade;
+    data['bairro'] = bairro;
+    data['uf'] = uf;
+    data['localidade'] = localidade;
+    data['estado'] = estado;
+    data['regiao'] = regiao;
+    data['ibge'] = ibge;
+    data['ddd'] = ddd;
+    data['createdAt'] = createdAt;
+    data['updatedAt'] = updatedAt;
     return data;
   }
 }
